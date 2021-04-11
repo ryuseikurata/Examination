@@ -1,0 +1,18 @@
+{
+    "editor.insertSpaces": true,
+    "editor.tabSize": 2,
+    "editor.detectIndentation": false,
+    "editor.renderControlCharacters": true,
+    "editor.formatOnSave": true,
+    "editor.wordWrap": "on",
+    "workbench.list.smoothScrolling": true,
+    "firestorerules.usePrettierFormatter": true,
+    "git.ignoreLimitWarning": true,
+    "editor.codeActionsOnSave": {
+      "source.fixAll.eslint": true
+    },
+    "path-intellisense.extensionOnImport": true,
+    "prettier.eslintIntegration": true,
+    "git.autofetch": true,
+    "git.postCommitCommand": "push"
+  }
