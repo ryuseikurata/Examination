@@ -4,7 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest"
   },
   "jest": {
     "moduleFileExtensions": [
@@ -15,12 +15,9 @@
       "^.+\\.ts$": "ts-jest"
     },
     "globals": {
-      "ts-jest": {
-        "tsConfig": "tsconfig.json"
-      }
     },
     "testMatch": [
-      "src/**/*.spec.ts"
+      "*/**/*.spec.ts"
     ]
   },
   "keywords": [],
