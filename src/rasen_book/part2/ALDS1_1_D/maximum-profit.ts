@@ -17,7 +17,7 @@ export class MaximumProfit {
   execute(n: number, prices: number[]) {
     for (const priceIndex in prices) {
       if (Number(priceIndex) === 0) {
-
+        
       }
     }
   }
