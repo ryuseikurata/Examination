@@ -1,5 +1,5 @@
 export class Prompt {
-  reader: any;
+  private reader: any;
 
   constructor() {
     /// 標準入力
