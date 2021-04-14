@@ -1,5 +1,4 @@
-
-class Main {
+export class Prompt {
   reader: any;
 
   constructor() {
@@ -12,31 +11,34 @@ class Main {
 
   }
 
-  execute() {
+  execute(func: (lines: string[]) => void) {
     const lines: string[] = []
     this.reader.on('line', (line: string) => {
       lines.push(line);
     });
     this.reader.on('close', () => {
-      const input = (lines[0] as string).split(" ");
-      if (input[0] && input[1]) {
-        const a = +Number(input[0]);
-        const b = +Number(input[1]);
-        const res = a - b * 2;
-
-        if (res > 0) {
-          console.log(res);
-        } else {
-          console.log(0);
-        }
-      }
-      console.log('the end!')
+      func(lines)
     });
   }
 
 }
 
-new Main().execute();
+new Prompt().execute(sample);
+
+export function sample(lines: string[]) {
+  const input = (lines[0] as string).split(" ");
+  if (input[0] && input[1]) {
+    const a = +Number(input[0]);
+    const b = +Number(input[1]);
+    const res = a - b * 2;
+
+    if (res > 0) {
+      console.log(res);
+    } else {
+      console.log(0);
+    }
+  }
+}
 
 /*
 npm ts-node src/docs/input.ts
